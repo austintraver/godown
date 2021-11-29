@@ -5,33 +5,46 @@
 [![GoDoc](https://godoc.org/github.com/mattn/godown?status.svg)](http://godoc.org/github.com/mattn/godown)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mattn/godown)](https://goreportcard.com/report/github.com/mattn/godown)
 
-Convert HTML into Markdown
+## About
+
+Convert HTML into Markdown.
 
 This is work in progress.
 
-## Usage
-
-```
-err := godown.Convert(w, r)
-checkError(err)
-```
-
-
-## Command Line
-
-```
-$ godown < index.html > index.md
-```
-
 ## Installation
 
-```
-$ go get github.com/mattn/godown/cmd/godown
-```
+* Installing the package:
+
+    ```shell
+    go get github.com/mattn/godown/cmd/godown
+    ```
+
+* Installing the command line interface:
+
+    ```shell
+    go install github.com/mattn/godown/cmd/godown@latest
+    ```
+
+## Usage
+
+* From inside Go programs:
+
+    ```go
+    err := godown.Convert(w, r)
+    checkError(err)
+    ```
+
+* From the command line:
+
+    ```shell
+    godown < input.html > output.md
+    ```
+
+---
 
 ## TODO
 
-* escape strings in HTML
+- [ ] Escape strings in HTML
 
 ## License
 
